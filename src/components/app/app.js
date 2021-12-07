@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.scss';
+import './app.scss';
 
 const AJAX_BASE = window.wpApiSettings.wprb_ajax_base;
 
