@@ -1,12 +1,11 @@
 {
-    "name": "wp-plugin-react",
-    "version": "1.0.0",
+    "name": "wp-theme-react",
+    "version": "0.5.0",
     "main": "index.js",
     "license": "MIT",
     "scripts": {
         "build": "webpack --mode production",
-        "start": "webpack --watch --mode development",
-        "lint": "esw webpack.config.* src tools --color"
+        "start": "webpack --watch --mode development"
     },
     "devDependencies": {
         "@babel/plugin-transform-runtime": "^7.16.4",

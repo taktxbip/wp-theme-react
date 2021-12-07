@@ -16,7 +16,7 @@ module.exports = (env = {}, argv) => {
     };
 
     const runShell = () => {
-
+        return;
         switch (process.platform) {
             case 'win32': return ['echo "Windows is not supported"'];
             case 'darwin': return [`zip -r ${package.name}.zip ./${package.name}/* `];
@@ -51,7 +51,9 @@ module.exports = (env = {}, argv) => {
                 new CopyWebpackPlugin({
                     patterns: [
                         { from: path.resolve(__dirname, 'server') + '/**', to: buildFolder },
-                        { from: path.resolve(__dirname, '*.php'), to: buildFolder }
+                        { from: path.resolve(__dirname, '*.php'), to: buildFolder },
+                        { from: path.resolve(__dirname, 'screenshot.png'), to: buildFolder },
+                        { from: path.resolve(__dirname, 'style.css'), to: buildFolder }
                     ]
                 }),
                 new WebpackShellPluginNext({
